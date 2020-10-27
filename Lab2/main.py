@@ -1,7 +1,7 @@
 from lab_python_oop.Rectangle import Rectangle
 from lab_python_oop.Circle import Circle
 from lab_python_oop.Square import Square
-
+import bcrypt 
 
 
 def main():
@@ -14,7 +14,7 @@ def main():
     print(rectangle)
     print(circle)
     print(square)
-
+    print(bcrypt.hashpw('ИУ5-51Б Шевчук Михаил Лаб_2'.encode(), bcrypt.gensalt()))
 
 if __name__ == "__main__":
     main()
