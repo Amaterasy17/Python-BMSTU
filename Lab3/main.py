@@ -1,5 +1,6 @@
 from lab_python_fp.field import field
 from lab_python_fp.gen_random import gen_random
+from lab_python_fp.unique import Unique
 
 
 def main():
@@ -10,7 +11,21 @@ def main():
     print(field(goods, 'title'))
     print(field(goods, 'title', 'price'))
 
-    print(gen_random(5, 15, 20))
+    list = ['Abc', 'ABC', 'AbC']
+    generator = gen_random(5, 15, 20)
+    print(generator)
+
+    for item in Unique(generator):
+        print(item)
+
+    for item in Unique(list):
+        print(item)
+    dict = {
+        'ignore_case': True,
+    }
+    print(' ')
+    for item in Unique(list, **dict):
+        print(item)
 
 if __name__ == "__main__":
     main()
